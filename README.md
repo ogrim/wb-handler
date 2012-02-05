@@ -6,7 +6,7 @@
 
 Download your favorite artists tracks by calling `download-favorites-week` with week number and a coll of the artist names, which are case sensitive, like so: `(download-favorites-week i ["trash80" "Dos.Putin"])`. This rebinds the `*favorite-artists*` var, which will be used if you only call the function with a week number. See what weeks are available with `(available-weeks)`, and update the RSS feed by calling `(p/update-rss-feed!)`.
 
-Default database is sqlite `database.db`, but this can be changed in `wb-handler.db`. Run `(create-db)` in `wb-handler.db` to make the sqlite database, and populate it with `(insert-week i)`.
+Default database is sqlite `database.db`, but this can be changed in `wb-handler.db`. Run `(db/create-db)` to make the sqlite database, and populate it with `(insert-week i)`.
 
 
 ## License
